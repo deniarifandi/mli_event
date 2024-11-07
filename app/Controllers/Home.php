@@ -63,7 +63,7 @@ class Home extends BaseController
         $email_smtp->initialize($config);
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
-        $email_smtp->setTo("$email_smtp");
+        $email_smtp->setTo("$email");
         $email_smtp->setSubject("Ini subjectnya");
         $email_smtp->setMessage("Ini isi/body email");
 
