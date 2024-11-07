@@ -65,11 +65,11 @@ class Home extends BaseController
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
         $email_smtp->setSubject("Konfirmasi Pendaftaran Event XXXXXX");
-        $email_smtp->setMessage("Terima kasih $nama Telah melakukan Pendaftaran.\n 
+        $email_smtp->setMessage("\n\nTerima kasih $nama Telah melakukan Pendaftaran.\n 
 Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini. \n\n\n
 xxx-xxxx-xxxx \n
 A/n xxxx xxxxxxxx\n\n
-Dan kirimkan bukti pembayaran ke Nomor Whatsapp \n
+Dan kirimkan bukti pembayaran ke Nomor Whatsapp \n\n
 xxx-xxxx-xxxx\n\n
 Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
 ");
