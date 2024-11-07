@@ -11,4 +11,4 @@ $routes->get('/daftar_sukses', 'Home::daftar_sukses');
 
 $routes->get('/admin','Home::admin');
 
-$routes->get('/send_email','Home::send_email');
+$routes->get('/send_ticket','Home::send_ticket');

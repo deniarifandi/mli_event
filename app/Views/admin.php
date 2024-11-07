@@ -46,7 +46,7 @@
                     ?><button class="btn btn-sm btn-success" disabled>Tiket Sudah Dikirim</button><?php
                   }
                   ?></td>
-                  <td><a class="btn btn-sm btn-primary" href="<?php echo base_url()?>send_email?nama=<?php echo $admin[$i]->nama; ?>&email=<?php echo $admin[$i]->email?>">Send Ticket</a></td>
+                  <td><a class="btn btn-sm btn-primary" href="<?php echo base_url()?>send_ticket?nama=<?php echo $admin[$i]->nama; ?>&email=<?php echo $admin[$i]->email?>">Send Ticket</a></td>
                 </tr>
             <?php } ?>
           </tbody>
