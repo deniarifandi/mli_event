@@ -33,14 +33,14 @@ class Home extends BaseController
         ];
         
         if ($builder->insert($data) === TRUE) {
-            echo "berhasil brother";
+            // echo "berhasil brother";
             $this->session->set('result', 'sukses');
             $this->session->markAsFlashdata('result');
             if($this->send_konfirmasi_pendaftaran($nama, $email) == "sukses")
              return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
             die();
         }else{
-            echo "gagal brother";
+            // echo "gagal brother";
             $this->session->set('result', 'gagal');
             $this->session->markAsFlashdata('result');
            //header('Location: '.base_url().'va/va_admin'); 
@@ -64,8 +64,8 @@ class Home extends BaseController
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
-        $email_smtp->setSubject("Ini subjectnya");
-        $email_smtp->setMessage("Ini isi/body email");
+        $email_smtp->setSubject("Konfirmasi Pendaftaran Event XXXXXX");
+        $email_smtp->setMessage("Terima kasih $nama Telah melakukan Pendaftaran.<br> Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini. <br>");
 
         if (!$email_smtp->send()) {
             // Print error details if email sending fails

@@ -21,7 +21,7 @@
       
       <h2 class="text-success">Pendaftaran berhasil</h2>
 
-      <h5>Terima kasih <?php echo $nama; ?> sudah melakukan pendaftaran</h5>
+      <h5>Terima kasih <p class="text-primary"><?php echo $nama; ?></p> sudah melakukan pendaftaran</h5>
       <br>
       <h5>Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini.</h5>
       <br>
