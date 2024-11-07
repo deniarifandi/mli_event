@@ -65,7 +65,7 @@ class Home extends BaseController
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
         $email_smtp->setSubject("Konfirmasi Pendaftaran Event XXXXXX");
-        $email_smtp->setMessage("Terima kasih $nama Telah melakukan Pendaftaran.<br> Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini. <br>");
+        $email_smtp->setMessage("Terima kasih $nama Telah melakukan Pendaftaran.<\n> Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini. <\n>");
 
         if (!$email_smtp->send()) {
             // Print error details if email sending fails
