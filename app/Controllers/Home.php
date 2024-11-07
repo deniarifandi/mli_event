@@ -37,7 +37,7 @@ class Home extends BaseController
             $this->session->set('result', 'sukses');
             $this->session->markAsFlashdata('result');
             $this->send_konfirmasi_pendaftaran($nama, $email);
-            header('Location: '.base_url().'daftar_sukses'); 
+            // header('Location: '.base_url().'daftar_sukses'); 
             die();
         }else{
             echo "gagal brother";
