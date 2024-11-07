@@ -133,7 +133,7 @@ Terima Kasih,
 
 ");
 
-        if ($email_smtp->send()) {
+        if (!$email_smtp->send()) {
             // Print error details if email sending fails
             echo "Failed to send email. Error details:<br>";
             echo $email_smtp->printDebugger(['headers']);
