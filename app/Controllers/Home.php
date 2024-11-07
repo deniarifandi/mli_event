@@ -36,8 +36,8 @@ class Home extends BaseController
             echo "berhasil brother";
             $this->session->set('result', 'sukses');
             $this->session->markAsFlashdata('result');
-            $this->send_konfirmasi_pendaftaran($nama, $email);
-            // header('Location: '.base_url().'daftar_sukses'); 
+            if($this->send_konfirmasi_pendaftaran($nama, $email) == "sukses")
+             return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
             die();
         }else{
             echo "gagal brother";
@@ -72,9 +72,13 @@ class Home extends BaseController
             echo "Failed to send email. Error details:<br>";
             echo $email_smtp->printDebugger(['headers']);
         } else {
-            //echo "Email sent successfully!";
-            return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
+            return "sukses";
+            
         }
+    }
+
+    public function daftar_sukses($nama, $email){
+        return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
     }
 
 
