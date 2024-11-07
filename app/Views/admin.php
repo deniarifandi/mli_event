@@ -28,6 +28,7 @@
                   <th>Nama</th>
                   <th>No.Hp</th>
                   <th>E-Mail</th>
+                  <th>Status Pengiriman Tiket</th>
                   <th>Send Ticket</th>
               </tr>
           </thead>
@@ -38,7 +39,14 @@
                   <td><?php echo $admin[$i]->nama; ?></td>
                   <td><?php echo $admin[$i]->hp; ?></td>
                   <td><?php echo $admin[$i]->email; ?></td>
-                  <td><a class="btn btn-sm btn-success">Send Ticket</a></td>
+                  <td><?php 
+                  if ($admin[$i]->flag_tiket == 0) {
+                    ?><button class="btn btn-sm btn-danger" disabled>Tiket Belum Dikirim</button><?php
+                  }else{
+                    ?><button class="btn btn-sm btn-success" disabled>Tiket Sudah Dikirim</button><?php
+                  }
+                  ?></td>
+                  <td><a class="btn btn-sm btn-primary" href="<?php echo base_url()?>send_email?nama=<?php echo $admin[$i]->nama; ?>&email=<?php echo $admin[$i]->email?>">Send Ticket</a></td>
                 </tr>
             <?php } ?>
           </tbody>

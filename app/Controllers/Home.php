@@ -102,7 +102,7 @@ Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
 
 
 
-    public function send_email(){
+    public function send_ticket(){
         $email_smtp = \Config\Services::email();
 
         $config["protocol"] = "smtp";
@@ -116,10 +116,21 @@ Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
 
         $email_smtp->initialize($config);
 
+        $nama = $_GET['nama'];
+        $email = $_GET['email'];
+
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
-        $email_smtp->setTo("arifandi.malang@gmail.com");
-        $email_smtp->setSubject("Ini subjectnya");
-        $email_smtp->setMessage("Ini isi/body email");
+        $email_smtp->setTo("$email");
+        $email_smtp->setSubject("Ticket Event XXXXXX");
+        $email_smtp->setMessage("
+Dear $nama,
+Berikut terlampir link Ticket untuk Event XXXXX\n
+
+https://sinarumi.co.id/ticket
+
+Terima Kasih,
+
+");
 
         if (!$email_smtp->send()) {
             // Print error details if email sending fails
