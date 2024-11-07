@@ -68,7 +68,7 @@ class Home extends BaseController
         $email_smtp->setMessage("Terima kasih $nama Telah melakukan Pendaftaran.\n 
 Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini. \n\n\n
 xxx-xxxx-xxxx \n
-A/n xxxx xxxxxxxx\n\n\n
+A/n xxxx xxxxxxxx\n\n
 Dan kirimkan bukti pembayaran ke Nomor Whatsapp \n
 xxx-xxxx-xxxx\n\n
 Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
