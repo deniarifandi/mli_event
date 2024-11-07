@@ -29,10 +29,10 @@
         <label class="form-label" for="loginName">E-mail</label>
         <input type="email" id="loginName" name="email" class="form-control" />
       </div>
-      <div data-mdb-input-init class="form-outline mb-4">
+     <!--  <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">Tempat, Tanggal Lahir</label>
         <input type="text" id="loginName" name="ttl" class="form-control" />
-      </div>
+      </div> -->
       <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">No.HP</label>
         <input type="text" id="loginName" name="hp" class="form-control" />

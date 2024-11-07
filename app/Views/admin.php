@@ -28,18 +28,16 @@
                   <th>Nama</th>
                   <th>No.Hp</th>
                   <th>E-Mail</th>
-                  <th>Tanggal Lahir</th>
                   <th>Send Ticket</th>
               </tr>
           </thead>
           <tbody>
-            <?php for($i = 1; $i<10; $i++){?>
+            <?php for($i = 0; $i < count($admin); $i++){?>
                 <tr>
-                  <td><?php echo $i; ?></td>
-                  <td>Nama <?php echo $i; ?></td>
-                  <td>No <?php echo $i; ?></td>
-                  <td>email <?php echo $i; ?></td>
-                  <td>ttl <?php echo $i; ?></td>
+                  <td><?php echo $i+1; ?></td>
+                  <td><?php echo $admin[$i]->nama; ?></td>
+                  <td><?php echo $admin[$i]->hp; ?></td>
+                  <td><?php echo $admin[$i]->email; ?></td>
                   <td><a class="btn btn-sm btn-success">Send Ticket</a></td>
                 </tr>
             <?php } ?>

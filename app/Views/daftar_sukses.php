@@ -25,13 +25,15 @@
       <br>
       <h5>Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini.</h5>
       <br>
-      <h4 class="text-primary">
+      <h3 class="text-primary">
       xxx-xxxx-xxxx<br>
       A/n xxxx xxxxxxxx
-      </h4>
+      </h3>
       <br>
       <h5>Dan kirimkan bukti pembayaran ke Nomor WhatsApp :</h5>
-      <h5>08xx xxxx xxxx</h5>
+      <h3 class="text-success">08xx xxxx xxxx</h3>
+      <br>
+      <h5>Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.</h5>
       <!-- Password input -->
       <div data-mdb-input-init class="form-outline mb-4">
         
