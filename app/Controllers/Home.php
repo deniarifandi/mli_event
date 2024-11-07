@@ -72,7 +72,7 @@ class Home extends BaseController
         $config["SMTPHost"]  = "mail.sinarumi.co.id";
         $config["SMTPUser"]  = "mli_event@sinarumi.co.id";
         $config["SMTPPass"]  = "n@PnMwkB#k3@";
-        $config["SMTPPort"]  = 465;
+        $config["SMTPPort"]  = 587;
         $config["SMTPCrypto"] = "ssl";
 
         $email_smtp->initialize($config);
