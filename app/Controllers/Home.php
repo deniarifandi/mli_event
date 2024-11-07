@@ -23,9 +23,7 @@ class Home extends BaseController
         $nama = $_POST['nama'];
         $email = $_POST['email'];
         $hp = $_POST['hp'];
-        // $ttl = $_POST['ttl'];
-
-      
+       
         $builder = $this->db->table('pendaftar');
          $data = [
             'nama' => $nama,
@@ -38,6 +36,7 @@ class Home extends BaseController
             echo "berhasil brother";
             $this->session->set('result', 'sukses');
             $this->session->markAsFlashdata('result');
+            $this->send_konfirmasi_pendaftaran($nama, $email);
             header('Location: '.base_url().'daftar_sukses'); 
             die();
         }else{
@@ -49,10 +48,35 @@ class Home extends BaseController
         }
 
     }
+    public function send_konfirmasi_pendaftaran($nama, $email){
+        $email_smtp = \Config\Services::email();
 
-    public function daftar_sukses(){
-        return view('daftar_sukses');
+        $config["protocol"] = "smtp";
+        $config["SMTPHost"]  = "mail.sinarumi.co.id";
+        $config["SMTPUser"]  = "mli_event@sinarumi.co.id";
+        $config["SMTPPass"]  = "n@PnMwkB#k3@";
+        $config["SMTPPort"]  = 465;
+        $config["SMTPCrypto"] = "ssl";
+      
+        $config['smtp_port'] = 587;
+
+        $email_smtp->initialize($config);
+
+        $email_smtp->setFrom("mli_event@sinarumi.co.id");
+        $email_smtp->setTo($email_smtp);
+        $email_smtp->setSubject("Ini subjectnya");
+        $email_smtp->setMessage("Ini isi/body email");
+
+        if (!$email_smtp->send()) {
+            // Print error details if email sending fails
+            echo "Failed to send email. Error details:<br>";
+            echo $email_smtp->printDebugger(['headers']);
+        } else {
+            //echo "Email sent successfully!";
+            return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
+        }
     }
+
 
     public function admin(){
 
@@ -64,6 +88,8 @@ class Home extends BaseController
         // return $query->getResult(); 
         return view('admin',['admin' => $query->getResult()]);
     }
+
+
 
     public function send_email(){
         $email_smtp = \Config\Services::email();
