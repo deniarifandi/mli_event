@@ -104,7 +104,7 @@ Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
 
     public function send_ticket(){
         $email_smtp = \Config\Services::email();
-
+        $builder = $this->db->table('pendaftar');
         $config["protocol"] = "smtp";
         $config["SMTPHost"]  = "mail.sinarumi.co.id";
         $config["SMTPUser"]  = "mli_event@sinarumi.co.id";
@@ -133,12 +133,32 @@ Terima Kasih,
 
 ");
 
-        if (!$email_smtp->send()) {
+        if ($email_smtp->send()) {
             // Print error details if email sending fails
             echo "Failed to send email. Error details:<br>";
             echo $email_smtp->printDebugger(['headers']);
         } else {
-            echo "Email sent successfully!";
+            // echo "Email sent successfully!";
+
+            $data = [
+                'flag_tiket' => 1,
+            ];
+
+            $builder->where('email', $email);
+            if (!$builder->update($data)) {
+                 return view('tiket_notsent');
+            }else{
+                 return view('tiket_sent');
+            }
+            
         }
+    }
+
+    public function tiket_sent(){
+        return view('tiket_sent');
+    }
+
+    public function tiket_notsent(){
+        return view('tiket_notsent');
     }
 }
