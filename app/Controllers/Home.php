@@ -124,7 +124,8 @@ Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
         $email_smtp->setSubject("Ticket Event XXXXXX");
         $email_smtp->setMessage("
 Dear $nama,
-Berikut terlampir link Ticket untuk Event XXXXX\n
+
+Berikut terlampir link Ticket untuk Event XXXXX
 
 https://sinarumi.co.id/ticket
 
