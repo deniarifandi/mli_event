@@ -17,4 +17,8 @@ application/logs/*
 !application/logs/.htaccess
 /vendor/
 .env
-writable/
+/writable/
+/writable/logs
+*.log
+/writable
+/writable/logs
