@@ -68,12 +68,12 @@ class Home extends BaseController
     public function send_email(){
         $email_smtp = \Config\Services::email();
 
-        $config["protocol"] = "smtp";
+        $config["protocol"] = "mail";
         $config["SMTPHost"]  = "mail.sinarumi.co.id";
         $config["SMTPUser"]  = "mli_event@sinarumi.co.id";
         $config["SMTPPass"]  = "n@PnMwkB#k3@";
         $config["SMTPPort"]  = 465;
-        // $config["SMTPCrypto"] = "ssl";
+        $config["SMTPCrypto"] = "ssl";
 
         $email_smtp->initialize($config);
 
