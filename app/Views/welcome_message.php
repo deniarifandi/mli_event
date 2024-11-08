@@ -37,6 +37,10 @@
         <label class="form-label" for="loginName">No.HP</label>
         <input type="text" id="loginName" name="hp" class="form-control" />
       </div>
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="loginName">Occupation</label>
+        <input type="text" id="loginName" name="occupation" class="form-control" />
+      </div>
 
       <!-- Password input -->
       <div data-mdb-input-init class="form-outline mb-4">

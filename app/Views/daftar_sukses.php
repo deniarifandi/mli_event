@@ -19,25 +19,31 @@
       <div class="text-center mb-3 h-100 align-middle">
       <!-- Email input -->
       
-      <h2 class="text-success">Pendaftaran berhasil</h2>
+      <h2 class="text-success">Thank you!</h2>
 
-      <h5>Terima kasih <a class="text-primary"><?php echo $nama; ?></a> sudah melakukan pendaftaran</h5>
-      <br>
-      <h5>Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini.</h5>
-      <br>
-      <h3 class="text-primary">
-      xxx-xxxx-xxxx<br>
-      A/n xxxx xxxxxxxx
-      </h3>
-      <br>
-      <h5>Dan kirimkan bukti pembayaran ke Nomor WhatsApp :</h5>
-      <h3 class="text-success">08xx xxxx xxxx</h3>
-      <br>
-      <h5>Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.</h5>
-      <!-- Password input -->
-      <div data-mdb-input-init class="form-outline mb-4">
-        
-      </div>
+We have received your registration <b><?php echo $nama; ?></b><br><br>
+  
+Below is the information regarding the Registration Fee for the Montessori Seminar with:<br><br> <h4>Paul Epstein</h4>
+<br>
+*Early Bird Price* (September 9–12, 2024): <z class="text-danger"><b>IDR 100,000</b></z>  <br>
+*Normal Price* (September 13–15, 2024): <z class="text-danger"><b>IDR 175,000</b></z>  <br>
+<br>
+Please make the payment via BANK TRANSFER to:  <br>
+<br>
+<h4 class="text-primary">Bank: BCA </h4>
+<h4 class="text-primary">Account Number: 1234567890</h4> 
+<h4 class="text-primary">Account Name: MASIH BELUM TAHU</h4>
+<h4 class="text-primary">Payment Reference: SEMINAR a.n *PENDAFTAR</h4>
+</p>
+<br>
+Confirm your payment by sending the proof of payment to the administrative WhatsApp at the number: <br><br><h4 class="text-success">082-332-686-310</h4> <br>
+ 
+Once we confirm your payment, the entrance ticket will be sent to your active email within a maximum of 24 hours.<br>
+
+If you have any issues or questions regarding the registration process, you can contact the administrative WhatsApp at<br><br><h4 class="text-success"> 082-332-686-310</h4><br>
+
+Thank you!<br>
+Have a nice day!<br>
       
     </div>
     </form>

@@ -28,12 +28,15 @@ class Home extends BaseController
         $nama = $this->request->getPost('nama', FILTER_SANITIZE_STRING);
         $email = $this->request->getPost('email', FILTER_SANITIZE_EMAIL);
         $hp = $this->request->getPost('hp', FILTER_SANITIZE_STRING);
+        $occupation = $this->request->getPost('occupation', FILTER_SANITIZE_STRING);
 
         // Prepare data array
         $data = [
             'nama' => $nama,
             'email' => $email,
             'hp' => $hp,
+            'occupation' => $occupation
+
         ];
 
         // Insert data into the table
@@ -85,15 +88,29 @@ class Home extends BaseController
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
-        $email_smtp->setSubject("Konfirmasi Pendaftaran Event XXXXXX");
-        $email_smtp->setMessage("\n\nTerima kasih $nama Telah melakukan Pendaftaran.\n 
-Selanjutnya, silakan melakukan pembayaran sejumlah 100.000 ke nomor rekening dibawah ini. \n\n\n
-xxx-xxxx-xxxx \n
-A/n xxxx xxxxxxxx\n\n
-Dan kirimkan bukti pembayaran ke Nomor Whatsapp \n\n
-xxx-xxxx-xxxx\n\n
-Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
-");
+        $email_smtp->setSubject("Registration Confirmation: Montessori Seminar with Dr. Paul Epstein");
+        $email_smtp->setMessage("Thank you!
+We have received your registration $nama  
+Below is the information regarding the Registration Fee for the Montessori Seminar with Paul Epstein:  
+
+Early Bird Price (September 9–12, 2024): IDR 100,000  
+Normal Price (September 13–15, 2024): IDR 175,000  
+
+Please make the payment via BANK TRANSFER to:  
+
+Bank: BCA  
+Account Number: 1234567890  
+Account Name: MASIH BELUM TAHU  
+Payment Reference: SEMINAR a.n *PENDAFTAR
+
+Confirm your payment by sending the proof of payment to the administrative WhatsApp at the number: 082-332-686-310. 
+ 
+Once we confirm your payment, the entrance ticket will be sent to your active email within a maximum of 24 hours.
+
+If you have any issues or questions regarding the registration process, you can contact the administrative WhatsApp at 082-332-686-310
+
+Thank you!
+Have a nice day!");
 
         if (!$email_smtp->send()) {
             // Print error details if email sending fails
@@ -127,27 +144,34 @@ Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
         $config["SMTPPass"]  = "n@PnMwkB#k3@";
         $config["SMTPPort"]  = 465;
         $config["SMTPCrypto"] = "ssl";
-      
         $config['smtp_port'] = 587;
 
         $email_smtp->initialize($config);
+
+        $timestamp = round(microtime(true) * 1000); // Current timestamp in milliseconds
+        $randomPart = rand(1000, 9999); // 4-digit random number
+        return "TICK-{$timestamp}-{$randomPart}";
 
         $nama = $_GET['nama'];
         $email = $_GET['email'];
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
-        $email_smtp->setSubject("Ticket Event XXXXXX");
+        $email_smtp->setSubject("E-Ticket : Montessori Seminar with Dr. Paul Epstein");
         $email_smtp->setMessage("
 Dear $nama,
 
-Berikut terlampir link Ticket untuk Event XXXXX
+Thank you, we have received your payment.
+  
+Attached is your entrance ticket to attend the seminar \"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES\" with Dr. Paul Epstein.
 
-https://sinarumi.co.id/event_registration/public/tiket?no=343
+Please show your ticket during the re-registration process.  
 
-Terima Kasih,
+Note: 
+Kindly arrive 30 minutes before the event starts, as there will be re-registration.
 
-");
+Thank you! See you soon.
+            ");
 
         if (!$email_smtp->send()) {
             // Print error details if email sending fails
@@ -158,6 +182,7 @@ Terima Kasih,
 
             $data = [
                 'flag_tiket' => 1,
+                'ticket_no' => "TICK-{$timestamp}-{$randomPart}"
             ];
 
             $builder->where('email', $email);
