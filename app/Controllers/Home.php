@@ -20,8 +20,22 @@ class Home extends BaseController
     }
 
     public function tiket(){
-        $no_tiket = $_GET['no'];
-        return view('tiket',['tiket' => $no_tiket]);
+
+        $builder = $this->db
+        ->table('pendaftar')
+        ->where('ticket_no',$_GET['no']);
+
+        $query   = $builder->get();
+        // echo count($query->getResult());
+        if (count($query->getResult()) > 0 ) {
+            $no_tiket = $_GET['no'];
+            return view('tiket',['tiket' => $no_tiket, 'result' => $query->getResult()]);
+        }else{
+            return "";
+        }
+        echo json_encode($query->getResult());
+
+        
     }
 
     public function daftar(){

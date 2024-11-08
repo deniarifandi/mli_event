@@ -25,36 +25,38 @@
                 <div class="col-md-6">
                   <img src="logotiket.png" style="max-width:100px">
                 </div>
+
                 <div class="col-md-6">
-                  <h4>This is Your</h4>
+                  <br>
+                  <h5>This is Your</h5>
                   <h2>E-Ticket</h2>
                 </div>
           </div>
           <br>
           <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 px-5">
                   <h6>PLEASE HAVE READY ON YOUR DEVICE/THIS BARCODE TO PRESENT FOR SCANNING</h6>
               </div>
           </div>
           
           <br>
            <div class="row">
-                <div class="col-md-6" style="text-align: left;">
+                <div class="col-md-6" style="text-align: left; padding-left: 50px; padding-right: 50px;">
                     <h6 class="text-secondary">EVENT TITLE</h6>
-                    <h4><b>Event of xxx</b></h4>
+                    <h5>Seminar <b>"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES"</b> with Dr. Paul Epstein.</h5><br>
                     <h6 class="text-secondary">EVENT Date and Time</h6>
-                    <h4><b>November 16, 2024</b></h4>
+                    <h5><b>Saturday, November 16th, 2024 - 13.00 WIB</b></h5>
                     <h6 class="text-secondary">Venue</h6>
-                    <h4><b>Hall</b></h4>
+                    <h5><b>SAME HOTEL, Jl. Pattimura No. 19 Malang. Jawa Timur.</b></h5>
                     <h6 class="text-secondary">Ticket No.</h6>
-                    <h4><b>X645CCS</b></h4>
+                    <h5><b><?php echo $result[0]->ticket_no; ?></b></h5>
                     <h6 class="text-secondary">Guest Name</h6>
-                    <h4><b>Mr. Brotherhood</b></h4>
+                    <h5><b><?php echo $result[0]->nama; ?></b></h5>
                 </div>
                 <div class="col-md-6">
                   <h6 class="text-secondary">Ticket Barcode:</h6>
                   <img src="barcode.jpg" style="max-width:250px" class="border border-black p-3">
-                  <h4><b>Tiket No</b></h4>
+                  <h5><b><?php echo $result[0]->ticket_no; ?></b></h5>
                 </div>
           </div>
 
