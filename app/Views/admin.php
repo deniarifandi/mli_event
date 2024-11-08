@@ -28,6 +28,7 @@
                   <th>Nama</th>
                   <th>No.Hp</th>
                   <th>E-Mail</th>
+                  <th>Occupation</th>
                   <th>Status Pengiriman Tiket</th>
                   <th>Send Ticket</th>
               </tr>
@@ -39,6 +40,7 @@
                   <td><?php echo $admin[$i]->nama; ?></td>
                   <td><?php echo $admin[$i]->hp; ?></td>
                   <td><?php echo $admin[$i]->email; ?></td>
+                  <td><?php echo $admin[$i]->occupation; ?></td>
                   <td><?php 
                   if ($admin[$i]->flag_tiket == 0) {
                     ?><button class="btn btn-sm btn-danger" disabled>Tiket Belum Dikirim</button><?php
