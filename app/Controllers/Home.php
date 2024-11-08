@@ -185,7 +185,7 @@ Thank you! See you soon.
 
             $data = [
                 'flag_tiket' => 1,
-                'ticket_no' => $no_tiket"
+                'ticket_no' => $no_tiket
             ];
 
             $builder->where('email', $email);
