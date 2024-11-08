@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="qrcode.min.js"></script>
 </head>
 <body>
+
+  <style>
+
+.center {
+  margin: auto;
+  width: 100%;
+  border: 3px solid green;
+  padding: 10px;
+}
+  </style>
 
 <div class="container" >
     <div class="row">
@@ -41,7 +53,7 @@
           
           <br>
            <div class="row">
-                <div class="col-md-6" style="text-align: left; padding-left: 50px; padding-right: 50px;">
+                <div class="col-md-8" style="text-align: left; padding-left: 50px; padding-right: 50px;">
                     <h6 class="text-secondary">EVENT TITLE</h6>
                     <h5>Seminar <b>"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES"</b> with Dr. Paul Epstein.</h5><br>
                     <h6 class="text-secondary">EVENT Date and Time</h6>
@@ -53,12 +65,13 @@
                     <h6 class="text-secondary">Guest Name</h6>
                     <h5><b><?php echo $result[0]->nama; ?></b></h5>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4 align-items-center">
                   <h6 class="text-secondary">Ticket Barcode:</h6>
-                  <img src="barcode.jpg" style="max-width:250px" class="border border-black p-3">
+                  <!-- <img src="barcode.jpg" style="max-width:250px" class="border border-black p-3"> -->
+                  <div id="qrcode" style="width: 250px; height:250px" class="center"></div>
                   <h5><b><?php echo $result[0]->ticket_no; ?></b></h5>
                 </div>
-          </div>
+                           </div>
 
         </div>
     </form>
@@ -71,5 +84,21 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script type="text/javascript">
 
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+      width : 230,
+      height : 230
+  });
+
+  $(document).ready(function () {
+  
+    var elText = "<?php echo base_url()."public/tiket?no=".$result[0]->ticket_no ?>";
+    
+    qrcode.makeCode(elText);
+
+  });
+
+  
+</script>
 </html>
