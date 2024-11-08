@@ -165,6 +165,8 @@ Thank you, we have received your payment.
   
 Attached is your entrance ticket to attend the seminar \"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES\" with Dr. Paul Epstein.
 
+
+
 Please show your ticket during the re-registration process.  
 
 Note: 
@@ -182,7 +184,7 @@ Thank you! See you soon.
 
             $data = [
                 'flag_tiket' => 1,
-                'ticket_no' => "T{$timestamp}{$randomPart}"
+                'ticket_no' => "T-{$timestamp}{$randomPart}"
             ];
 
             $builder->where('email', $email);
