@@ -22,11 +22,11 @@
       <h2>Registration : Montessor Seminar with Dr. Paul Epstein</h2>
       <br>
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">FULL NAME (For Certificate)</label>
+        <label class="form-label" for="loginName">FULL NAME (For Certificate):</label>
         <input type="text" id="loginName" name="nama" class="form-control" />
       </div>
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">E-mail</label>
+        <label class="form-label" for="loginName">E-mail:</label>
         <input type="email" id="loginName" name="email" class="form-control" />
       </div>
      <!--  <div data-mdb-input-init class="form-outline mb-4">
@@ -38,7 +38,7 @@
         <input type="text" id="loginName" name="hp" class="form-control" />
       </div>
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">Occupation</label>
+        <label class="form-label" for="loginName">Occupation:</label>
         <input type="text" id="loginName" name="occupation" class="form-control" />
       </div>
 
