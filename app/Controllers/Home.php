@@ -150,7 +150,7 @@ Have a nice day!");
 
         $timestamp = time() % 100000; // Current timestamp in milliseconds
         $randomPart = rand(0, 99);  // 4-digit random number
-        $no_tiket = "T{$timestamp}{$randomPart}";
+        $no_tiket = "T-{$timestamp}{$randomPart}";
        // return "T{$timestamp}{$randomPart}";
 
         $nama = $_GET['nama'];
