@@ -21,7 +21,7 @@
       
       <h2 class="text-success">Pengiriman Tiket Berhasil</h2>
 
-      <a class="btn btn-primary" href="<?php echo base_url();?>admin">Kembali</a>
+      <a class="btn btn-primary" href="<?php echo base_url();?>admticket">Kembali</a>
         
       </div>
       
