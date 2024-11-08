@@ -143,7 +143,7 @@ Dear $nama,
 
 Berikut terlampir link Ticket untuk Event XXXXX
 
-https://sinarumi.co.id/ticket
+https://sinarumi.co.id/event_registration/public/tiket?no=343
 
 Terima Kasih,
 
