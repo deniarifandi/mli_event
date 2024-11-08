@@ -22,7 +22,7 @@
       <h2>Registration : Montessor Seminar with Dr. Paul Epstein</h2>
       <br>
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">Full Name</label>
+        <label class="form-label" for="loginName">FULL NAME (For Certificate)</label>
         <input type="text" id="loginName" name="nama" class="form-control" />
       </div>
       <div data-mdb-input-init class="form-outline mb-4">
@@ -50,7 +50,7 @@
       <!-- 2 column grid layout -->
 
       <!-- Submit button -->
-      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Daftar</button>
+      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Register</button>
 
       <!-- Register buttons -->
       
