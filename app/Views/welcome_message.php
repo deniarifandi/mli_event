@@ -19,7 +19,7 @@
       <div class="text-center mb-3 h-100 align-middle">
       <!-- Email input -->
 
-      <h2>Portal Pendaftaran Seminar XXX</h2>
+      <h2>Registration : Montessor Seminar with Dr. Paul Epstein</h2>
       <br>
       <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">Nama</label>
