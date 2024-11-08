@@ -150,6 +150,7 @@ Have a nice day!");
 
         $timestamp = time() % 100000; // Current timestamp in milliseconds
         $randomPart = rand(0, 99);  // 4-digit random number
+        $no_tiket = "T{$timestamp}{$randomPart}";
        // return "T{$timestamp}{$randomPart}";
 
         $nama = $_GET['nama'];
@@ -165,7 +166,7 @@ Thank you, we have received your payment.
   
 Attached is your entrance ticket to attend the seminar \"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES\" with Dr. Paul Epstein.
 
-
+https://sinarumi.co.id/paulseminarregistration/tiket?no=$no_tiket
 
 Please show your ticket during the re-registration process.  
 
@@ -184,7 +185,7 @@ Thank you! See you soon.
 
             $data = [
                 'flag_tiket' => 1,
-                'ticket_no' => "T-{$timestamp}{$randomPart}"
+                'ticket_no' => $no_tiket"
             ];
 
             $builder->where('email', $email);
