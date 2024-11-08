@@ -148,9 +148,9 @@ Have a nice day!");
 
         $email_smtp->initialize($config);
 
-        $timestamp = round(microtime(true) * 1000); // Current timestamp in milliseconds
-        $randomPart = rand(1000, 9999); // 4-digit random number
-        return "TICK-{$timestamp}-{$randomPart}";
+        $timestamp = time() % 100000; // Current timestamp in milliseconds
+        $randomPart = rand(0, 99);  // 4-digit random number
+       // return "T{$timestamp}{$randomPart}";
 
         $nama = $_GET['nama'];
         $email = $_GET['email'];
@@ -182,7 +182,7 @@ Thank you! See you soon.
 
             $data = [
                 'flag_tiket' => 1,
-                'ticket_no' => "TICK-{$timestamp}-{$randomPart}"
+                'ticket_no' => "T{$timestamp}{$randomPart}"
             ];
 
             $builder->where('email', $email);
