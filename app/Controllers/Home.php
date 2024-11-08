@@ -19,35 +19,56 @@ class Home extends BaseController
         // return view('admin');
     }
 
+    public function tiket(){
+        $no_tiket = $_GET['no'];
+        return view('tiket',['tiket' => $no_tiket]);
+    }
+
     public function daftar(){
-        $nama = $_POST['nama'];
-        $email = $_POST['email'];
-        $hp = $_POST['hp'];
-       
-        $builder = $this->db->table('pendaftar');
-         $data = [
+        $nama = $this->request->getPost('nama', FILTER_SANITIZE_STRING);
+        $email = $this->request->getPost('email', FILTER_SANITIZE_EMAIL);
+        $hp = $this->request->getPost('hp', FILTER_SANITIZE_STRING);
+
+        // Prepare data array
+        $data = [
             'nama' => $nama,
             'email' => $email,
             'hp' => $hp,
-            // 'ttl' => $ttl
         ];
-        
-        if ($builder->insert($data) === TRUE) {
-            // echo "berhasil brother";
-            $this->session->set('result', 'sukses');
-            $this->session->markAsFlashdata('result');
-            if($this->send_konfirmasi_pendaftaran($nama, $email) == "sukses")
-             return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
-            die();
-        }else{
-            // echo "gagal brother";
-            $this->session->set('result', 'gagal');
-            $this->session->markAsFlashdata('result');
-           //header('Location: '.base_url().'va/va_admin'); 
-            die();
+
+        // Insert data into the table
+        $builder = $this->db->table('pendaftar');
+        if ($builder->insert($data)) {
+            // Set success message in session
+            $this->session->setFlashdata('result', 'sukses');
+            
+            // Attempt to send confirmation email
+            if ($this->send_konfirmasi_pendaftaran($nama, $email)) {
+                return redirect()->to(base_url("daftar_sukses?nama=$nama&email=$email"));
+            } else {
+                // Handle case where email could not be sent
+                $this->session->setFlashdata('result', 'Email gagal dikirim. Silakan coba lagi.');
+                return redirect()->to(base_url("daftar_gagal"));
+            }
+        } else {
+            // Set failure message in session
+            $this->session->setFlashdata('result', 'gagal');
+            return redirect()->to(base_url("daftar_gagal"));
         }
 
     }
+
+    public function daftar_sukses(){
+        $nama = $_GET['nama'];
+        $email = $_GET['email'];
+         return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
+    }
+
+     public function daftar_gagal(){
+        
+         return view('daftar_gagal');
+    }
+
     public function send_konfirmasi_pendaftaran($nama, $email){
         $email_smtp = \Config\Services::email();
 
@@ -83,11 +104,6 @@ Pembayaran akan divalidasi, dan tiket akan dikirimkan dalam waktu 1x24 jam.
             
         }
     }
-
-    public function daftar_sukses($nama, $email){
-        return view('daftar_sukses',['nama'=> $nama, 'email'=>$email]);
-    }
-
 
     public function admin(){
 

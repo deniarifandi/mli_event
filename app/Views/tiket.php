@@ -11,21 +11,54 @@
 <div class="container" >
     <div class="row">
         <div class="col-md-12">
-    <br><br>
+    <br>
 <!-- Pills content -->
 <div class="tab-content">
   <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
     <form>
-      <div class="text-center mb-3 h-100 align-middle">
-      <!-- Email input -->
-      
-      <h2 class="text-success">Pengiriman Tiket Berhasil</h2>
-
-      <a class="btn btn-primary" href="<?php echo base_url();?>admin">Kembali</a>
+        <div class="text-center mb-3 h-100 align-middle">
+          <!-- Email input -->
         
-      </div>
-      
-    </div>
+          <!-- <h5>Berikut terlampir tiket Event XXXXX</h5> -->
+          
+          <div class="row">
+                <div class="col-md-6">
+                  <img src="logotiket.png" style="max-width:100px">
+                </div>
+                <div class="col-md-6">
+                  <h4>This is Your</h4>
+                  <h2>E-Ticket</h2>
+                </div>
+          </div>
+          <br>
+          <div class="row">
+              <div class="col-md-12">
+                  <h6>PLEASE HAVE READY ON YOUR DEVICE/THIS BARCODE TO PRESENT FOR SCANNING</h6>
+              </div>
+          </div>
+          
+          <br>
+           <div class="row">
+                <div class="col-md-6" style="text-align: left;">
+                    <h6 class="text-secondary">EVENT TITLE</h6>
+                    <h4><b>Event of xxx</b></h4>
+                    <h6 class="text-secondary">EVENT Date and Time</h6>
+                    <h4><b>November 16, 2024</b></h4>
+                    <h6 class="text-secondary">Venue</h6>
+                    <h4><b>Hall</b></h4>
+                    <h6 class="text-secondary">Ticket No.</h6>
+                    <h4><b>X645CCS</b></h4>
+                    <h6 class="text-secondary">Guest Name</h6>
+                    <h4><b>Mr. Brotherhood</b></h4>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="text-secondary">Ticket Barcode:</h6>
+                  <img src="barcode.jpg" style="max-width:250px" class="border border-black p-3">
+                  <h4><b>Tiket No</b></h4>
+                </div>
+          </div>
+
+        </div>
     </form>
   </div>
 </div>
