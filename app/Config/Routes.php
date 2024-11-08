@@ -10,7 +10,7 @@ $routes->post('/daftar', 'Home::daftar');
 $routes->get('/daftar_sukses', 'Home::daftar_sukses');
 $routes->get('/daftar_gagal', 'Home::daftar_gagal');
 
-$routes->get('/admin','Home::admin');
+$routes->get('/admticket','Home::admin');
 
 $routes->get('/send_ticket','Home::send_ticket');
 
