@@ -166,7 +166,7 @@ Thank you, we have received your payment.
   
 Attached is your entrance ticket to attend the seminar \"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES\" with Dr. Paul Epstein.
 
-https://sinarumi.co.id/paulseminarregistration/tiket?no=$no_tiket
+https://sinarumi.co.id/paulseminarregistration/public/tiket?no=$no_tiket
 
 Please show your ticket during the re-registration process.  
 
