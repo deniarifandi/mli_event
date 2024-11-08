@@ -112,9 +112,9 @@ Normal Price (September 13–15, 2024): IDR 200,000
 
 Please make the payment via BANK TRANSFER to:  
 
-Bank: BCA  
-Account Number: 1234567890  
-Account Name: MASIH BELUM TAHU  
+Bank: CIMB NIAGA  
+Account Number: 800191717900  
+Account Name: Pendidikan dan Sosial Kasih Bunda Malang  
 Payment Reference: SEMINAR a.n *PENDAFTAR
 
 Confirm your payment by sending the proof of payment to the administrative WhatsApp at the number: 082-332-686-310. 

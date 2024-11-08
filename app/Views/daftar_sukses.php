@@ -30,9 +30,9 @@ Below is the information regarding the Registration Fee for the Montessori Semin
 <br>
 Please make the payment via BANK TRANSFER to:  <br>
 <br>
-<h4 class="text-primary">Bank: BCA </h4>
-<h4 class="text-primary">Account Number: 1234567890</h4> 
-<h4 class="text-primary">Account Name: MASIH BELUM TAHU</h4>
+<h4 class="text-primary">Bank: CIMB NIAGA </h4>
+<h4 class="text-primary">Account Number: 800191717900</h4> 
+<h4 class="text-primary">Account Name: Pendidikan dan Sosial Kasih Bunda Malang</h4>
 <h4 class="text-primary">Payment Reference: SEMINAR a.n *PENDAFTAR</h4>
 </p>
 <br>
