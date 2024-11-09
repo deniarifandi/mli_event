@@ -46,8 +46,8 @@ class Home extends BaseController
 
         // Prepare data array
         $data = [
-            'nama' => $nama,
             'email' => $email,
+            'nama' => $nama,
             'hp' => $hp,
             'occupation' => $occupation
 
@@ -55,7 +55,7 @@ class Home extends BaseController
 
         // Insert data into the table
         $builder = $this->db->table('pendaftar');
-        if ($builder->insert($data)) {
+        if ($builder->upsert($data)) {
             // Set success message in session
             $this->session->setFlashdata('result', 'sukses');
             
