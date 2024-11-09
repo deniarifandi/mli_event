@@ -8,15 +8,15 @@
      <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="qrcode.min.js"></script>
 </head>
-<body>
+<body style="background-color:rgb(9, 23, 66); color: white; background-image: url(<?php echo base_url() ?>bgtiket.png); background-repeat: no-repeat; background-position: center; background-attachment: fixed; background-size: 500px">
 
   <style>
 
 .center {
   margin: auto;
   width: 100%;
-  border: 3px solid green;
-  padding: 10px;
+  border: 3px solid white;
+  padding: 6px;
 }
   </style>
 
@@ -66,7 +66,7 @@
                     <h5><b><?php echo $result[0]->nama; ?></b></h5>
                 </div>
                 <div class="col-md-4 align-items-center">
-                  <h6 class="text-secondary">Ticket Barcode:</h6>
+                  <h6 class="text-white">Ticket Barcode:</h6>
                   <!-- <img src="barcode.jpg" style="max-width:250px" class="border border-black p-3"> -->
                   <div id="qrcode" style="width: 250px; height:250px" class="center"></div>
                   <h5><b><?php echo $result[0]->ticket_no; ?></b></h5>

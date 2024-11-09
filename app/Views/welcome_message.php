@@ -18,9 +18,11 @@
     <form method="POST" action="<?php echo base_url(); ?>daftar">
       <div class="text-center mb-3 h-100 align-middle">
       <!-- Email input -->
-
-      <h2>Registration Details:<br>Montessor Seminar with Dr. Paul Epstein</h2>
+      <h2>My Little Island School - Sunshine Teachers Training</h2>
+      <h3>Present</h3>
+      <h2>International Montessori Seminar with Dr. Paul Epstein</h2>
       <br>
+      <h3>Registration Details:</h3><br>
       <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">FULL NAME (For Certificate):</label>
         <input type="text" id="loginName" name="nama" class="form-control" />
@@ -38,7 +40,7 @@
         <input type="text" id="loginName" name="hp" class="form-control" />
       </div>
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">Occupation:</label>
+        <label class="form-label" for="loginName">Teacher/Parents:</label>
         <input type="text" id="loginName" name="occupation" class="form-control" />
       </div>
 

@@ -102,10 +102,10 @@ class Home extends BaseController
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
-        $email_smtp->setSubject("Registration Confirmation: Montessori Seminar with Dr. Paul Epstein");
+        $email_smtp->setSubject("Registration Confirmation: International Montessori Seminar with Dr. Paul Epstein");
         $email_smtp->setMessage("Thank you!
 We have received your registration $nama  
-Below is the information regarding the Registration Fee for the Montessori Seminar with Paul Epstein:  
+Below is the information regarding the registration Fee for the International Montessori Seminar with Dr. Paul Epstein:
 
 Early Bird Price (September 9–12, 2024): IDR 125,000  
 Normal Price (September 13–15, 2024): IDR 200,000  
@@ -172,7 +172,7 @@ Have a nice day!");
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
-        $email_smtp->setSubject("E-Ticket : Montessori Seminar with Dr. Paul Epstein");
+        $email_smtp->setSubject("E-Ticket: International Montessori Seminar with Dr. Paul Epstein");
         $email_smtp->setMessage("
 Dear $nama,
 
