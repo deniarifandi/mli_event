@@ -65,7 +65,7 @@ class Home extends BaseController
             } else {
                 // Handle case where email could not be sent
                 $this->session->setFlashdata('result', 'Email gagal dikirim. Silakan coba lagi.');
-                return redirect()->to(base_url("daftar_gagal"));
+                //return redirect()->to(base_url("daftar_gagal"));
             }
         } else {
             // Set failure message in session

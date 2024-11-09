@@ -6,7 +6,7 @@
     <title></title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-color:rgb(9, 23, 66); color: white; background-image: url(<?php echo base_url() ?>bgtiket.png); background-repeat: no-repeat; background-position: center; background-attachment: fixed; background-size: 500px">
 
 <div class="container" >
     <div class="row">
@@ -18,18 +18,18 @@
     <form method="POST" action="<?php echo base_url(); ?>daftar">
       <div class="text-center mb-3 h-100 align-middle">
       <!-- Email input -->
-      <h2>My Little Island School - Sunshine Teachers Training</h2>
-      <h3>Present</h3>
+      <h3>My Little Island School - Sunshine Teachers Training</h3><br>
+      <h4>Present</h4><br>
       <h2>International Montessori Seminar with Dr. Paul Epstein</h2>
       <br>
-      <h3>Registration Details:</h3><br>
+      <h3 class="text-warning">Registration Details:</h3><br>
       <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">FULL NAME (For Certificate):</label>
-        <input type="text" id="loginName" name="nama" class="form-control" />
+        <input type="text" id="loginName" name="nama" class="form-control" required />
       </div>
       <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">E-mail:</label>
-        <input type="email" id="loginName" name="email" class="form-control" />
+        <input type="email" id="loginName" name="email" class="form-control" required />
       </div>
      <!--  <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">Tempat, Tanggal Lahir</label>
@@ -37,11 +37,11 @@
       </div> -->
       <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">Phone Number:</label>
-        <input type="text" id="loginName" name="hp" class="form-control" />
+        <input type="text" id="loginName" name="hp" class="form-control" required />
       </div>
       <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">Teacher/Parents:</label>
-        <input type="text" id="loginName" name="occupation" class="form-control" />
+        <input type="text" id="loginName" name="occupation" class="form-control" required />
       </div>
 
       <!-- Password input -->
