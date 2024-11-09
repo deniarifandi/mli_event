@@ -93,7 +93,7 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 
   $(document).ready(function () {
   
-    var elText = "<?php echo base_url()."public/tiket?no=".$result[0]->ticket_no ?>";
+    var elText = "<?php echo base_url()."tiket?no=".$result[0]->ticket_no ?>";
     
     qrcode.makeCode(elText);
 
