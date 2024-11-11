@@ -31,7 +31,7 @@ class Home extends BaseController
             $no_tiket = $_GET['no'];
             return view('tiket',['tiket' => $no_tiket, 'result' => $query->getResult()]);
         }else{
-            return "";
+            return view('ticket_not_found');
         }
         echo json_encode($query->getResult());
 

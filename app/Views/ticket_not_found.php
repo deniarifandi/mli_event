@@ -19,9 +19,9 @@
       <div class="text-center mb-3 h-100 align-middle">
       <!-- Email input -->
       
-      <h2 class="text-danger">Pendaftaran Gagal</h2>
+      <h2 class="text-danger">Ticket Not Found</h2>
 
-      <h5>Coba lagi atau hubungi Admin jika Error Berlanjut</h5>
+      <h5>Coba Refresh atau hubungi Admin jika Error Berlanjut</h5>
       <br>
       <h5>WhatsApp Admin:</h5>
       <h3 class="text-success">082-332-686-310</h3>
