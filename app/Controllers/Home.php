@@ -107,8 +107,8 @@ class Home extends BaseController
 We have received your registration $nama  
 Below is the information regarding the registration Fee for the International Montessori Seminar with Dr. Paul Epstein:
 
-Early Bird Price (September 9–12, 2024): IDR 125,000  
-Normal Price (September 13–15, 2024): IDR 200,000  
+Early Bird Price (November 9–12, 2024): IDR 125,000  
+Normal Price (November 13–15, 2024): IDR 200,000  
 
 Please make the payment via BANK TRANSFER to:  
 
