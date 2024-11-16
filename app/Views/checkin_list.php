@@ -25,6 +25,8 @@
       }else{
         ?><h4 class="text-danger">not ready to check in</h4><?php
       }?>
+
+      <!-- <input type="file" accept="image/*;capture=camera"> -->
       <table class="table table-bordered">
           <thead>
               <tr>

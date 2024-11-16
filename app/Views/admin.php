@@ -20,7 +20,8 @@
       <!-- Email input -->
       
       <h2 class="text-success">Data Pendaftaran</h2>
-
+      <a class="btn btn-primary" href="<?php echo base_url()?>checkin_list">Check-In</a>
+      <br><br>
       <table class="table table-bordered">
           <thead>
               <tr>
