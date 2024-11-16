@@ -18,3 +18,9 @@ $routes->get('/tiket_sent','Home::tiket_sent');
 $routes->get('/tiket_notsent','Home::tiket_notsent');
 
 $routes->get('/tiket',"Home::tiket");
+
+$routes->get('/checked_in',"Home::checked_in");
+$routes->get('/checkin_list',"Home::checkin_list");
+
+$routes->get('/session_setter',"Home::session_setter");
+$routes->get('/session_unsetter',"Home::session_unsetter");

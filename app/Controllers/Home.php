@@ -7,7 +7,7 @@ class Home extends BaseController
     private $db = null;
 
     function __construct(){
-
+        date_default_timezone_set("Asia/Bangkok");
         $this->db = db_connect();
         $session = service('session');
     }
@@ -17,6 +17,31 @@ class Home extends BaseController
         return view('welcome_message');
         //return view('pembayaran');
         // return view('admin');
+    }
+
+    public function checked_in(){
+        return view('checked_in');
+        // $this->session_setter();
+    }
+
+    public function session_setter(){
+        $_SESSION['check_in'] = "true";
+        return redirect()->to(base_url("checkin_list"));
+    }
+
+    public function session_unsetter(){
+         unset($_SESSION['check_in']);
+         return redirect()->to(base_url("checkin_list"));
+    }
+
+    public function checkin_list(){
+        $_SESSION['check_in'] = "true";
+        $builder = $this->db->table('pendaftar')->where("flag_checkin IS NOT NULL",null, false);
+
+        $query   = $builder->get();
+     
+        return view('checkin_list',['admin' => $query->getResult()]);
+
     }
 
     public function tiket(){
@@ -29,11 +54,29 @@ class Home extends BaseController
         // echo count($query->getResult());
         if (count($query->getResult()) > 0 ) {
             $no_tiket = $_GET['no'];
-            return view('tiket',['tiket' => $no_tiket, 'result' => $query->getResult()]);
+
+
+            if (isset($_SESSION['check_in'])) {
+                $now = new \DateTime();
+
+                $data = [
+                    'flag_checkin' => $now->format('Y-m-d H:i:s'),
+                ];
+
+                $builder->where('ticket_no', $no_tiket);
+                if (!$builder->update($data)) {
+                    return view('tiket_notsent');
+                } else {
+                    return view('checked_in', ['result' => $query->getResult()]);
+                }
+            }else{
+                return view('tiket',['tiket' => $no_tiket, 'result' => $query->getResult()]);
+            }
+            
         }else{
             return view('ticket_not_found');
         }
-        echo json_encode($query->getResult());
+        // echo json_encode($query->getResult());
 
         
     }
