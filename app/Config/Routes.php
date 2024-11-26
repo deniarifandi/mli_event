@@ -24,3 +24,5 @@ $routes->get('/checkin_list',"Home::checkin_list");
 
 $routes->get('/session_setter',"Home::session_setter");
 $routes->get('/session_unsetter',"Home::session_unsetter");
+
+$routes->get('/testesp','Home::testEsp');

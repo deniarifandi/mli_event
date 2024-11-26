@@ -12,6 +12,21 @@ class Home extends BaseController
         $session = service('session');
     }
 
+    public function testEsp(){
+        $data = [
+            'isi' => "isi",
+          
+
+        ];
+
+        // Insert data into the table
+        $builder = $this->db->table('esp');
+        $builder->upsert($data);
+        // if ($builder->upsert($data)) {
+
+        // }
+    }
+
     public function index(): string
     {
         return view('welcome_message');
