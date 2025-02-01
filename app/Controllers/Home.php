@@ -222,7 +222,6 @@ Have a nice day!");
     }
 
 
-
     public function send_ticket($namanya, $emailnya,$no_tiket){
         $email_smtp = \Config\Services::email();
         $builder = $this->db->table('pendaftar');
