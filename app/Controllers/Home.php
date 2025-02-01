@@ -175,7 +175,9 @@ Below is the information regarding the registration Fee for the International Mo
 Early Bird Price (November 9–12, 2024): IDR 125,000  
 Normal Price (November 13–15, 2024): IDR 200,000  
 
-Please make the payment via BANK TRANSFER to:  
+Please make the payment via BANK TRANSFER to
+
+:  
 
 Bank: CIMB NIAGA  
 Account Number: 800191717900  
@@ -211,6 +213,7 @@ Have a nice day!");
         // return $query->getResult(); 
         return view('admin',['admin' => $query->getResult()]);
     }
+
 
     public function resend_ticket(){
        
