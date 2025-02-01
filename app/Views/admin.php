@@ -27,9 +27,10 @@
               <tr>
                   <th>No</th>
                   <th>Nama</th>
-                  <th>No.Hp</th>
+                  <th>Branch</th>
                   <th>E-Mail</th>
-                  <th>Occupation</th>
+                  <th>Relationship</th>
+                  
                   <th>Register Time</th>
                   <th>Status Pengiriman Tiket</th>
                   <th>Nomor Tiket</th>
@@ -53,7 +54,7 @@
                   }
                   ?></td>
                   <td><?php echo $admin[$i]->ticket_no; ?></td>
-                  <td><a class="btn btn-sm btn-primary" href="<?php echo base_url()?>send_ticket?nama=<?php echo $admin[$i]->nama; ?>&email=<?php echo $admin[$i]->email?>">Send Ticket</a></td>
+                  <td><a class="btn btn-sm btn-primary" href="<?php echo base_url()?>send_ticket?nama=<?php echo $admin[$i]->nama; ?>&email=<?php echo $admin[$i]->email?>&tiket_no=<?php echo $admin[$i]->ticket_no ?>">Send Ticket</a></td>
                 </tr>
             <?php } ?>
           </tbody>
