@@ -212,6 +212,10 @@ Have a nice day!");
         return view('admin',['admin' => $query->getResult()]);
     }
 
+    public function resend_ticket(){
+        $this->send_ticket($_GET['nama'],$_GET['email'],$_GET['no_tiket']);
+    }
+
 
 
     public function send_ticket($namanya, $emailnya,$no_tiket){

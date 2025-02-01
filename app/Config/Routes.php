@@ -13,6 +13,7 @@ $routes->get('/daftar_gagal', 'Home::daftar_gagal');
 $routes->get('/admticket','Home::admin');
 
 $routes->get('/send_ticket','Home::send_ticket');
+$routes->get('/resend_ticket','Home::resend_ticket');
 
 $routes->get('/tiket_sent','Home::tiket_sent');
 $routes->get('/tiket_notsent','Home::tiket_notsent');
