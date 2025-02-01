@@ -235,7 +235,7 @@ Have a nice day!");
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");
-        $email_smtp->setSubject("E-Ticket: International Montessori Seminar with Dr. Paul Epstein");
+        $email_smtp->setSubject("E-Ticket: Chinese New Year Celebration");
         $email_smtp->setMessage("
 Dear $nama,
 
