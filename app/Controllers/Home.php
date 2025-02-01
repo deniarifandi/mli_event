@@ -99,15 +99,22 @@ class Home extends BaseController
     public function daftar(){
         $nama = $this->request->getPost('nama', FILTER_SANITIZE_STRING);
         $email = $this->request->getPost('email', FILTER_SANITIZE_EMAIL);
+        $grade = $this->request->getPost('grade', FILTER_SANITIZE_EMAIL);
         $hp = $this->request->getPost('hp', FILTER_SANITIZE_STRING);
         $occupation = $this->request->getPost('occupation', FILTER_SANITIZE_STRING);
+
+         $timestamp = time() % 100000; // Current timestamp in milliseconds
+        $randomPart = rand(0, 99);  // 4-digit random number
+        $no_tiket = "T-{$timestamp}{$randomPart}";
 
         // Prepare data array
         $data = [
             'email' => $email,
+            'grade' => $grade,
             'nama' => $nama,
             'hp' => $hp,
-            'occupation' => $occupation
+            'occupation' => $occupation,
+            'ticket_no' => $no_tiket
 
         ];
 
@@ -118,8 +125,8 @@ class Home extends BaseController
             $this->session->setFlashdata('result', 'sukses');
             
             // Attempt to send confirmation email
-            if ($this->send_konfirmasi_pendaftaran($nama, $email)) {
-                return redirect()->to(base_url("daftar_sukses?nama=$nama&email=$email"));
+            if ($this->send_ticket($nama, $email,$no_tiket)) {
+                return redirect()->to(base_url("daftar_sukses?nama=$nama&email=$email&no_tiket=$no_tiket"));
             } else {
                 // Handle case where email could not be sent
                 $this->session->setFlashdata('result', 'Email gagal dikirim. Silakan coba lagi.');
@@ -207,7 +214,7 @@ Have a nice day!");
 
 
 
-    public function send_ticket(){
+    public function send_ticket($namanya, $emailnya,$no_tiket){
         $email_smtp = \Config\Services::email();
         $builder = $this->db->table('pendaftar');
         $config["protocol"] = "smtp";
@@ -220,13 +227,11 @@ Have a nice day!");
 
         $email_smtp->initialize($config);
 
-        $timestamp = time() % 100000; // Current timestamp in milliseconds
-        $randomPart = rand(0, 99);  // 4-digit random number
-        $no_tiket = "T-{$timestamp}{$randomPart}";
+       
        // return "T{$timestamp}{$randomPart}";
 
-        $nama = $_GET['nama'];
-        $email = $_GET['email'];
+        $nama = $namanya;
+        $email = $emailnya;
 
         $email_smtp->setFrom("mli_event@sinarumi.co.id");
         $email_smtp->setTo("$email");

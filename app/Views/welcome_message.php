@@ -18,29 +18,33 @@
     <form method="POST" action="<?php echo base_url(); ?>daftar">
       <div class="text-center mb-3 h-100 align-middle">
       <!-- Email input -->
-      <h3>My Little Island School - Sunshine Teachers Training</h3><br>
-      <h4>Present</h4><br>
-      <h2>International Montessori Seminar with Dr. Paul Epstein</h2>
+      
+      <h2>Chinese New Year Celebration's RSVP</h2>
       <br>
       <h3 class="text-warning">Registration Details:</h3><br>
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">FULL NAME (For Certificate):</label>
+        <label class="form-label" for="loginName">Child's Name:</label>
         <input type="text" id="loginName" name="nama" class="form-control" required />
       </div>
-      <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">E-mail:</label>
+        <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="loginName">Email:</label>
         <input type="email" id="loginName" name="email" class="form-control" required />
       </div>
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="loginName">Class/Grade:</label>
+        <input type="text" id="loginName" name="grade" class="form-control" required />
+      </div>
+    
      <!--  <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="loginName">Tempat, Tanggal Lahir</label>
         <input type="text" id="loginName" name="ttl" class="form-control" />
       </div> -->
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">Phone Number:</label>
+        <label class="form-label" for="loginName">Branch:</label>
         <input type="text" id="loginName" name="hp" class="form-control" required />
       </div>
       <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="loginName">Teacher/Parents:</label>
+        <label class="form-label" for="loginName">Relationship:</label>
         <input type="text" id="loginName" name="occupation" class="form-control" required />
       </div>
 
