@@ -10,6 +10,16 @@
 </head>
 <body style="background-color:rgb(9, 23, 66); color: white; background-image: url(<?php echo base_url() ?>bgtiket.png); background-repeat: no-repeat; background-position: center; background-attachment: fixed; background-size: 500px">
 
+ <style>
+
+.center {
+  margin: auto;
+  width: 100%;
+  border: 3px solid white;
+  padding: 6px;
+}
+  </style>
+
 <div class="container" >
     <div class="row">
         <div class="col-md-12">
@@ -27,9 +37,11 @@ We have received your registration <b><?php echo $nama; ?></b><br><br>
   
 Below is the information regarding the registration Fee for the Chinese New Year Celebration :
 <br>
+<br>
+<br>
 
  <form>
-        <div class="text-center mb-3 h-100 align-middle">
+        <div class="text-center mb-3 h-100 align-middle center p-4">
           <!-- Email input -->
         
           <!-- <h5>Berikut terlampir tiket Event XXXXX</h5> -->
@@ -56,11 +68,12 @@ Below is the information regarding the registration Fee for the Chinese New Year
            <div class="row">
                 <div class="col-md-8" style="text-align: left; padding-left: 50px; padding-right: 50px;">
                     <h6 class="text-secondary">EVENT TITLE</h6>
-                    <h5>Seminar <b>"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES"</b> with Dr. Paul Epstein.</h5><br>
+                    <h5><b>Chinese New Year Celebrations </b></h5><br>
                     <h6 class="text-secondary">EVENT Date and Time</h6>
-                    <h5><b>Saturday, November 16th, 2024 - 13.00 WIB</b></h5>
+                    <h5><b>Thursday, January 6th, 2025 </b></h5>
                     <h6 class="text-secondary">Venue</h6>
-                    <h5><b>SAME HOTEL, Jl. Pattimura No. 19 Malang. Jawa Timur.</b></h5>
+                    <h5><b>National Leader School's Hall<br>
+                    Jl. Lembah Dieng no. 7 Sukun, Malang</b></h5>
                     <h6 class="text-secondary">Ticket No.</h6>
                     <h5><b><?php echo $_GET['no_tiket']; ?></b></h5>
                     <h6 class="text-secondary">Guest Name</h6>
@@ -76,7 +89,8 @@ Below is the information regarding the registration Fee for the Chinese New Year
 
         </div>
     </form>
- 
+ <br>
+ <br>
 The entrance ticket also sent to your active email within a maximum of 24 hours.<br>
 
 If you have any issues or questions regarding the registration process, you can contact the administrative WhatsApp at<br><br><h4 class="text-success"> 082-332-686-310</h4><br>

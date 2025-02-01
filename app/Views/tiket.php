@@ -55,11 +55,12 @@
            <div class="row">
                 <div class="col-md-8" style="text-align: left; padding-left: 50px; padding-right: 50px;">
                     <h6 class="text-secondary">EVENT TITLE</h6>
-                    <h5>Seminar <b>"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES"</b> with Dr. Paul Epstein.</h5><br>
+                    <h5><b>Chinese New Year Celebrations </b></h5><br>
                     <h6 class="text-secondary">EVENT Date and Time</h6>
-                    <h5><b>Saturday, November 16th, 2024 - 13.00 WIB</b></h5>
+                    <h5><b>Thursday, January 6th, 2025 </b></h5>
                     <h6 class="text-secondary">Venue</h6>
-                    <h5><b>SAME HOTEL, Jl. Pattimura No. 19 Malang. Jawa Timur.</b></h5>
+                    <h5><b>National Leader School's Hall<br>
+                    Jl. Lembah Dieng no. 7 Sukun, Malang</b></h5>
                     <h6 class="text-secondary">Ticket No.</h6>
                     <h5><b><?php echo $result[0]->ticket_no; ?></b></h5>
                     <h6 class="text-secondary">Guest Name</h6>
