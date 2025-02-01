@@ -239,15 +239,15 @@ Have a nice day!");
         $email_smtp->setMessage("
 Dear $nama,
 
-Thank you, we have received your payment.
+Thank you, we have received your registration.
   
-Attached is your entrance ticket to attend the seminar \"Raising Resilient Children: Montessori Approaches for COVID-ERA CHALLENGES\" with Dr. Paul Epstein.
-
-https://sinarumi.co.id/paulseminarregistration/public/tiket?no=$no_tiket
+Below is your entrance ticket link to attend the Chinese New Year Celebration
 
 Please show your ticket during the re-registration process.  
 
-Note: 
+https://sinarumi.co.id/paulseminarregistration/public/tiket?no=$no_tiket
+
+*Note*:  
 Kindly arrive 30 minutes before the event starts, as there will be re-registration.
 
 Thank you! See you soon.
