@@ -254,7 +254,7 @@ Below is your entrance ticket link to attend the Chinese New Year Celebration
 
 Please show your ticket during the re-registration process.  
 
-https://sinarumi.co.id/paulseminarregistration/public/tiket?no=$no_tiket
+https://sinarumi.co.id/cnyrsvp/public/tiket?no=$no_tiket
 
 *Note*:  
 Kindly arrive 30 minutes before the event starts, as there will be re-registration.
