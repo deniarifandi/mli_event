@@ -213,7 +213,12 @@ Have a nice day!");
     }
 
     public function resend_ticket(){
-        $this->send_ticket($_GET['nama'],$_GET['email'],$_GET['no_tiket']);
+       
+         if ($this->send_ticket($_GET['nama'],$_GET['email'],$_GET['no_tiket'])) {
+                 return view('tiket_notsent');
+            }else{
+                 return view('tiket_sent');
+            }
     }
 
 
