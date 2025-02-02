@@ -93,7 +93,7 @@ Below is the information regarding the registration Fee for the Chinese New Year
  <br>
 The entrance ticket also sent to your active email within a maximum of 24 hours.<br>
 
-If you have any issues or questions regarding the registration process, you can contact the administrative WhatsApp at<br><br><h4 class="text-success"> 082-332-686-310</h4><br>
+If you have any issues or questions regarding the registration process, you can contact the administrative WhatsApp at<br><br><h4 class="text-success"> +62 819-2757-1900</h4><br>
 
 Thank you!<br>
 Have a nice day!<br>
