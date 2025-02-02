@@ -70,7 +70,7 @@ Below is the information regarding the registration Fee for the Chinese New Year
                     <h6 class="text-secondary">EVENT TITLE</h6>
                     <h5><b>Chinese New Year Celebrations </b></h5><br>
                     <h6 class="text-secondary">EVENT Date and Time</h6>
-                    <h5><b>Thursday, January 6th, 2025 </b></h5>
+                    <h5><b>Friday, February 7th, 2025 - 6 p.m </b></h5>
                     <h6 class="text-secondary">Venue</h6>
                     <h5><b>National Leader School's Hall<br>
                     Jl. Lembah Dieng no. 7 Sukun, Malang</b></h5>
